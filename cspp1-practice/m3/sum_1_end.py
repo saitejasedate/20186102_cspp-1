@@ -4,7 +4,6 @@ sum of the n natural numbers using while loop.
 '''
 TEMP = 0
 END = 1
-while END <= 6:
+for END in range(1, 7, 1):
     TEMP = TEMP + END
-    END = END + 1
 print(TEMP)
