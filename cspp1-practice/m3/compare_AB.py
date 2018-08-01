@@ -1,11 +1,14 @@
-
-varA=8
-varB=7
-if varA > varB:
-	print("Greater")
-elif varA < varB:
-		print("smaller")
-elif varA==varB:
-		print("equal")
-else:
-	print("strings involved")
+'''
+@author : saitejasedate
+This is third porgram.
+'''
+VARA = 8
+VARB = 7
+if VARA > VARB:
+    print("Greater")
+elif VARA < VARB:
+    print("smaller")
+elif VARA==VARB:
+    print("equal")
+elif (isinstance(VARA) == str) or (isinstance(VARB) == str):
+    print("strings involved")
