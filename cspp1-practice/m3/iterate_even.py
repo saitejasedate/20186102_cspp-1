@@ -2,8 +2,6 @@
 @author : saitejasedate
 fourth program.
 '''
-A = 2
-while A <= 10:
+for A in range(2, 12, 2):
     print(A)
-    A = A+2
 print('Goodbye!')
