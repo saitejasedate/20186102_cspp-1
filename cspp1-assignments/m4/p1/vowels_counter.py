@@ -13,8 +13,8 @@ def main():
     l = len(input_str)
     c = 0
     j = 0
-    for i in range(0,l,1):
-        for j in range(0,b,1):
+    for i in range(0, l, 1):
+        for j in range(0, b, 1):
             if input_str[i] == vowel_str[j]:
                 c = c+1
     print(c)
