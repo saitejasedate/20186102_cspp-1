@@ -17,14 +17,14 @@ def main():
     # the input string is in s
     # remove pass and start your code here
     vowel_str = 'aeiou'
-    b = len(vowel_str)
-    l = len(input_str)
-    c = 0
-    for i in range(0, l, 1):
-        for j in range(0, b, 1):
+    length_l = len(input_str)
+    length_b = len(vowel_str)
+    co_unt = 0
+    for i in range(0, length_l, 1):
+        for j in range(0, length_b, 1):
             if input_str[i] == vowel_str[j]:
-                c = c+1
-    print(c)
+                co_unt = co_unt+1
+    print c
 
 if __name__ == "__main__":
     main()
