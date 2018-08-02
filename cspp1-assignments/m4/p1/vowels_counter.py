@@ -5,7 +5,7 @@
 #Number of vowels: 5
 
 def main():
-    input_str = input()
+    input_str = raw_input()
     # the input string is in s
     # remove pass and start your code here
     vowel_str = 'aeiou'
@@ -13,12 +13,11 @@ def main():
     l = len(input_str)
     c = 0
     j = 0
-    for i in range(0, l, 1):
-        for j in range(0, b, 1):
+    for i in range(0,l,1):
+        for j in range(0,b,1):
             if input_str[i] == vowel_str[j]:
                 c = c+1
     print(c)
 
 if __name__ == "__main__":
     main()
-
