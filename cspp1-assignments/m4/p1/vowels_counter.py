@@ -12,6 +12,7 @@ def main():
     var_b = len(vowel_str)
     var_l = len(input_str)
     var_c = 0
+    var_j = 0
     for i in range(0, var_l, 1):
         for j in range(0, var_b, 1):
             if input_str[i] == vowel_str[j]:
