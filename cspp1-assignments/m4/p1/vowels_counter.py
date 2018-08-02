@@ -8,7 +8,7 @@ def main():
 	s = input()
 	# the input string is in s
 	# remove pass and start your code here
-	vowels="a,e,i,o,u"
+	vowels="a, e, i, o, u"
 	b=len(vowels)
 	l=len(s)
 	c=0
