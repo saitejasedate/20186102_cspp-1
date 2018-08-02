@@ -24,7 +24,7 @@ def main():
         for j in range(0, length_b, 1):
             if input_str[i] == vowel_str[j]:
                 co_unt = co_unt+1
-    print c
+    print co_unt
 
 if __name__ == "__main__":
     main()
