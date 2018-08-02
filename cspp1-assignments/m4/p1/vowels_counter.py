@@ -19,5 +19,5 @@ def main():
 				c=c+1
 	print(c)
 
-if __name__== "__main__":
+if __ name__== "__main__":
 	main()
