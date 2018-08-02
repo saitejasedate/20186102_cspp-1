@@ -5,7 +5,7 @@
 #Number of vowels: 5
 
 def main():
-	input_str = input()
+	input_str = raw_input()
 	# the input string is in s
 	# remove pass and start your code here
 	vowel_str = 'aeiou'
