@@ -13,7 +13,7 @@ def main():
     '''
     Main function prints the number of vowels in given string
     '''
-    input_str = raw_input()
+    input_str = input()
     # the input string is in s
     # remove pass and start your code here
     vowel_str = 'aeiou'
