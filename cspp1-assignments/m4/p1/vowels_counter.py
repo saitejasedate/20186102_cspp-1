@@ -9,15 +9,15 @@ def main():
     # the input string is in s
     # remove pass and start your code here
     vowel_str = 'aeiou'
-    var_b = len(vowel_str)
-    var_l = len(input_str)
-    var_c = 0
-    var_j = 0
-    for i in range(0, var_l, 1):
-        for j in range(0, var_b, 1):
+    b = len(vowel_str)
+    l = len(input_str)
+    c = 0
+    j = 0
+    for i in range(0, l, 1):
+        for j in range(0, b, 1):
             if input_str[i] == vowel_str[j]:
-                var_c = var_c+1
-    print(var_c)
+                c = c+1
+    print(c)
 
 if __name__ == "__main__":
     main()
