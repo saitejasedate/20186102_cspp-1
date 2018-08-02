@@ -18,5 +18,5 @@ def main():
             c_len = c_len+1
     print(c_len)
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
