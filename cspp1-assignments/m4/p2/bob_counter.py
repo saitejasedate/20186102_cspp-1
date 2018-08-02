@@ -1,5 +1,5 @@
 '''Assume s is a string of lower case characters.
-Write a program that prints the number of times the string 'bob' occurs in s. 
+Write a program that prints the number of times the string 'bob' occurs in s.
 For example, if s = 'azcbobobegghakl', then your program should print
 Number of times bob occurs is: 2'''
 
@@ -15,9 +15,8 @@ def main():
     c_len = 0
     for i in range(0, len_str-2, 1):
         if(str_lwr[i] == 'b' and str_lwr[i+1] == 'o' and str_lwr[i+2] == 'b'):
-            c_len=c_len+1
+            c_len = c_len+1
     print(c_len)
 
 if __name__== "__main__":
     main()
-    
