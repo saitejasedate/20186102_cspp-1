@@ -1,3 +1,8 @@
+'''
+@author : saitejasedate
+Program to print number of vowels in a given string
+'''
+
 #Assume s is a string of lower case characters.
 #Write a program that counts up the number of vowels contained in the string s.
 #Valid vowels are: 'a', 'e', 'i', 'o', and 'u'.
@@ -5,6 +10,9 @@
 #Number of vowels: 5
 
 def main():
+    '''
+    Main function prints the number of vowels in given string
+    '''
     input_str = raw_input()
     # the input string is in s
     # remove pass and start your code here
