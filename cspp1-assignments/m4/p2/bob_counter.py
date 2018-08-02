@@ -11,7 +11,7 @@ def main():
     '''
     program to print number of times bob occurs in a string
     '''
-    str_lwr = raw_input()
+    str_lwr = input()
     len_str = len(str_lwr)
     i = 0
     c_len = 0
