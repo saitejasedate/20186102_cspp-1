@@ -7,10 +7,14 @@ def main():
     '''
     Read string from the input, store it in variable str_input.
     '''
-    str_input = input()
+    a = list(str(input()))
     l=len(str_input)
     for i in range(0,l-1):
-    	if a[i]==! or a[i]==@ or a[i]==$ or a[i]==% or a[i]==^ or a[i]==*:
+    	if a[i]=='!' or a[i]=='@' or a[i]=='$' or a[i]=='%' or a[i]=='^' or a[i]=='*':
+    		a[i]=" "
+    		print(a)
+
+
     		
 
 if __name__ == "__main__":
