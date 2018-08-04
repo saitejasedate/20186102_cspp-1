@@ -10,12 +10,12 @@ def main():
     a = list(str(input()))
     l=len(a)
     for i in range(0, l):
-    	if a[i] == '!' or a[i] == '@' or a[i] == '$' or a[i] == '%' or a[i] == '^' or a[i] == '*' or a[i] == '#':
-    		a[i]=" "
-    		print(a)
+        if a[i] == '!' or a[i] == '@' or a[i] == '$' or a[i] == '%' or a[i] == '^' or a[i] == '*' or a[i] == '#':
+            a[i] = " "
+            print(a)
 
 
-    		
+            
 
 if __name__ == "__main__":
     main()
