@@ -1,3 +1,6 @@
+'''
+@author : saitejasedate
+'''
 # Write a python program to find if the given number is a perfect cube or not
 # using guess and check algorithm
 
@@ -22,5 +25,5 @@ def main():
     else:
         print(c_len, "is not a perfect cube")
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
