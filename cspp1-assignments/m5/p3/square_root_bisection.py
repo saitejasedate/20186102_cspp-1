@@ -1,3 +1,6 @@
+'''
+@author : saitejaedate
+'''
 # Write a python program to find the square root of the given number
 # using approximation method
 
@@ -13,6 +16,9 @@ def main():
     # ep_silon and step are initialized
     # don't change these value
     # your code starts here
+    '''
+    python program to find the square root of the given number
+    '''
     x_num = int(input())
     ep_silon = 0.01
     lo_wer = 0.0
