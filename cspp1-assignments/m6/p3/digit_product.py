@@ -10,11 +10,11 @@ def main():
     Read any number from the input, store it in variable int_input.
     '''
     int_input = int(input())
-    a_list = list(str(int_input))
+    a = list(str(int_input))
     l_list = len(a)
     tem_p = 1
     c_t = 0
-    while c_t!=l_list:
+    while c_t !=l_list:
         re_m = int_input%10
         tem_p = tem_p*re_m
         c_t = c_t+1
