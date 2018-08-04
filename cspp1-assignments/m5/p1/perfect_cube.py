@@ -13,6 +13,10 @@
 # Output: 21950 is not a perfect cube
 
 def main():
+    '''
+    python program to find if the given number is a perfect cube or not
+    using guess and check algorithm
+    '''
     # input is captured in s
     # watch out for the data type of value stored in s
     # your code starts here
