@@ -8,7 +8,7 @@ def main():
     Read string from the input, store it in variable str_input.
     '''
     a = list(str(input()))
-    l=len(str_input)
+    l=len(a)
     for i in range(0,l-1):
     	if a[i]=='!' or a[i]=='@' or a[i]=='$' or a[i]=='%' or a[i]=='^' or a[i]=='*':
     		a[i]=" "
