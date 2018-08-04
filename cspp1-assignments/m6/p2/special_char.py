@@ -12,7 +12,7 @@ def main():
     for i in range(0, l):
         if a[i] == '!' or a[i] == '@' or a[i] == '$' or a[i] == '%' or a[i] == '^' or a[i] == '*' or a[i] == '#':
             a[i] = " "
-            print(str(a))
+    print(str(a))
 
 
             
