@@ -32,5 +32,5 @@ def main():
         bi_val = (high_er + lo_wer)/2.0
     print(bi_val)
 
-if __name__== "__main__":
+if __name__ == "__main__":
     main()
