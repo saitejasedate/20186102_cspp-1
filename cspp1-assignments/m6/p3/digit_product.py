@@ -12,9 +12,9 @@ def main():
     int_input = int(input())
     a_list = list(str(int_input))
     l_list = len(a)
-    temp = 1
+    tem_p = 1
     c_t = 0
-    while c!=l:
+    while c_t!=l_list:
         re_m = int_input%10
         tem_p = tem_p*re_m
         c_t = c_t+1
