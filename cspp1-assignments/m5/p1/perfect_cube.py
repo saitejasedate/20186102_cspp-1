@@ -13,14 +13,14 @@ def main():
     # input is captured in s
     # watch out for the data type of value stored in s
     # your code starts here
-    CU_BE = int(input())
-    GU_ESS = 1
-    while (GU_ESS**3) < CU_BE:
-        GU_ESS += 1
-    if int(GU_ESS**3) == CU_BE:
-        print(CU_BE, "is a perfect cube")
+    c_len = int(input())
+    gu_ess = 1
+    while (gu_ess**3) < c_len:
+        gu_ess += 1
+    if int(gu_ess**3) == c_len:
+        print(c_len, "is a perfect cube")
     else:
-        print(CU_BE, "is not a perfect cube")
+        print(c_len, "is not a perfect cube")
 
 if __name__== "__main__":
     main()
