@@ -19,7 +19,7 @@
 # instead of
 # Remaining balance: 813.4141998135
 
-# So your program only prints out one thing: the remaining 
+# So your program only prints out one thing: the remaining
 #balance at the end of the year in the format:
 # Remaining balance: 4784.0
 
@@ -27,7 +27,8 @@
 # Monthly interest rate= (Annual interest rate) / 12.0
 # Minimum monthly payment = (Minimum monthly payment rate) x (Previous balance)
 # Monthly unpaid balance = (Previous balance) - (Minimum monthly payment)
-# Updated balance each month = (Monthly unpaid balance) + (Monthly interest rate x Monthly unpaid balance)
+# Updated balance each month = (Monthly unpaid balance) +
+#(Monthly interest rate x Monthly unpaid balance)
 def pay_debt_in_year(blc_1, annual_interest_rate, monthly_payment_rate):
 
     """function debt off in a year"""
