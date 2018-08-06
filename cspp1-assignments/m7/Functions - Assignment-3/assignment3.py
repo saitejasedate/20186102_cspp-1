@@ -41,6 +41,9 @@
 
 
 def payingDebtOffInAYear(balance_in, annual_interestrate):
+    '''
+    Bisection method
+    '''
     init_balance = balance_in
     moninterest_rate = annual_interestrate/12
     low_i = init_balance/12
