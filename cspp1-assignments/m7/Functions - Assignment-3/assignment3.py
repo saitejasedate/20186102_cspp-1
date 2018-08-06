@@ -40,7 +40,7 @@
 
 
 
-def payingDebtOffInAYear(balance_in, annual_interestrate):
+def payingDebtOff_inAYear(balance_in, annual_interestrate):
     '''
     Bisection method
     '''
@@ -68,7 +68,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print("Lowest Payment:", payingDebtOffInAYear(data[0],data[1]))
+    print("Lowest Payment:", payingDebtOff_inAYear(data[0],data[1]))
     
 if __name__== "__main__":
     main()
