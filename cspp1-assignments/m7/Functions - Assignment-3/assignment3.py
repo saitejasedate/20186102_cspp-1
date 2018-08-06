@@ -38,14 +38,12 @@
 # large inputs, and notice how fast it is (try the same large inputs in your solution to Problem 2 to compare!). Produce the same return
 # value as you did in Assignment 2.
 
-
-
 def payingDebtOff_inAYear(balance_in, annual_interestrate):
+    init_balance = balance_in
+    moninterest_rate = annual_interestrate/12
     '''
     Bisection method
     '''
-    init_balance = balance_in
-    moninterest_rate = annual_interestrate/12
     low_i = init_balance/12
     up_i = (init_balance* (1+ moninterest_rate)**12)/12.0
     epsilon = 0.03
