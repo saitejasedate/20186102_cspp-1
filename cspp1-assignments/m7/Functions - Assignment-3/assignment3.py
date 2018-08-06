@@ -39,6 +39,9 @@
 # value as you did in Assignment 2.
 
 def payingDebtOff_inAYear(balance_in, annual_interestrate):
+    '''
+    Bisection method
+    '''
     init_balance = balance_in
     moninterest_rate = annual_interestrate/12
     low_i = init_balance/12
@@ -61,9 +64,6 @@ def payingDebtOff_inAYear(balance_in, annual_interestrate):
 
 def main():
     data = input()
-    '''
-    Bisection method
-    '''
     data = data.split(' ')
     data = list(map(float, data))
     print("Lowest Payment:", payingDebtOff_inAYear(data[0], data[1]))
