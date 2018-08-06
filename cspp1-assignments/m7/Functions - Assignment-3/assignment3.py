@@ -46,9 +46,6 @@ def payingDebtOff_inAYear(balance_in, annual_interestrate):
     epsilon = 0.03
     while abs(balance_in) > epsilon:
         mon_payrate = (up_i+low_i)/2
-    '''
-    Bisection method
-    '''
         balance_in = init_balance
         for _ in range(12):
             ans_i = balance_in - mon_payrate
@@ -64,6 +61,9 @@ def payingDebtOff_inAYear(balance_in, annual_interestrate):
 
 def main():
     data = input()
+    '''
+    Bisection method
+    '''
     data = data.split(' ')
     data = list(map(float, data))
     print("Lowest Payment:", payingDebtOff_inAYear(data[0], data[1]))
