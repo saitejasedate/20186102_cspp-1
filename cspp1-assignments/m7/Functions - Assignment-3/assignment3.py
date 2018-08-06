@@ -40,7 +40,7 @@
 
 
 
-def payingDebtOffInAYear(balance, annualInterestRate):
+def payingDebtOffInAYear(balance_in, annual_interestrate):
     init_balance = balance_in
     moninterest_rate = annual_interestrate/12
     low_i = init_balance/12
@@ -65,7 +65,7 @@ def main():
     data = input()
     data = data.split(' ')
     data = list(map(float, data))
-    print(payingDebtOffInAYear(data[0],data[1]))
+    print("Lowest Payment:", payingDebtOffInAYear(data[0],data[1]))
     
 if __name__== "__main__":
     main()
