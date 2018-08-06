@@ -1,3 +1,6 @@
+'''
+@author : saitejasedate
+'''
 # Functions | Assignment-1 - Paying Debt off in a Year
 
 # Write a program to calculate the credit card balance after one year if a person only pays the minimum monthly payment required by the
@@ -47,5 +50,5 @@ def main():
     print("Remaining balance:", pay_debt_in_year(data[0], data[1], data[2]))
 
 if __name__ == "__main__":
-	main()
+    main()
 
