@@ -16,15 +16,14 @@ def factorial_num(n_um):
     if n_um == 0:
         return 1
     return n_um*factorial_num(n_um-1)
-    
-    
+
 def main():
     '''
     Python function, factorial(n), that takes in one number 
     and returns the factorial of given number
     '''
-    a = input()
-    print(factorial_num(int(a)))
+    a_n = input()
+    print(factorial_num(int(a_n)))
 
 if __name__ == "__main__":
     main()
