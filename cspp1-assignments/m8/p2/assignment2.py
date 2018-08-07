@@ -1,7 +1,7 @@
 '''
 @author : saitejasedate
 # Exercise: Assignment-2
-# Write a Python function, sumof_digts, that takes in one number 
+# Write a Python function, sumof_digts, that takes in one number
 and returns the sum of digits of given number.
 
 # This function takes in one number and returns one number.
@@ -21,7 +21,7 @@ def sumofdigts(n_s):
 
 def main():
     '''
-    Python function, sumof_digts, that takes in one number 
+    Python function, sumof_digts, that takes in one number
     and returns the sum of digits of given number.
     '''
     a_s = input()
