@@ -1,7 +1,7 @@
 '''
 @author : saitejasedate
 # Exercise: Assignment-1
-# Write a Python function, factorial(n), that takes in one number 
+# Write a Python function, factorial(n), that takes in one number
 and returns the factorial of given number
 # This function takes in one number and returns one number.
 '''
@@ -19,7 +19,7 @@ def factorial_num(n_um):
 
 def main():
     '''
-    Python function, factorial(n), that takes in one number 
+    Python function, factorial(n), that takes in one number
     and returns the factorial of given number
     '''
     a_n = input()
