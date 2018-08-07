@@ -7,16 +7,16 @@
 # This function takes in one number and returns one number.
 
 
-def factorial_num(n):
+def factorial_num(n_um):
     '''
     n is positive Integer
 
     returns: a positive integer, the factorial of n.
     '''
     # Your code here
-    if n==0:
+    if n_um == 0:
         return 1
-    return n*factorial_num(n-1)
+    return n_um*factorial_num(n_um-1)
     
     
     
