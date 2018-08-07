@@ -1,11 +1,10 @@
 '''
 @author : saitejasedate
-'''
 # Exercise: Assignment-1
-# Write a Python function, factorial(n), that takes in one number and returns the factorial of given number.
-
+# Write a Python function, factorial(n), that takes in one number 
+and returns the factorial of given number
 # This function takes in one number and returns one number.
-
+'''
 
 def factorial_num(n_um):
     '''
@@ -19,10 +18,11 @@ def factorial_num(n_um):
     return n_um*factorial_num(n_um-1)
     
     
-    
-
-
 def main():
+    '''
+    Python function, factorial(n), that takes in one number 
+    and returns the factorial of given number
+    '''
     a = input()
     print(factorial_num(int(a)))
 
