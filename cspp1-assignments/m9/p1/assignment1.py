@@ -15,10 +15,10 @@ def is_word_guessed(secret_word, letters_guessed):
       False otherwise
     '''
     # FILL IN YOUR CODE HERE...
+    a =list(secret_word)
     for i in range(len(secret_word)):
-        a =list(secret_word)
         for j in range(len(letters_guessed)):
-    return a[i]==letters_guessed[j]
+            return a[i]==letters_guessed[j]
             
 
 
