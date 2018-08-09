@@ -13,7 +13,6 @@ def get_available_letters(letters_guessed):
       yet been guessed.
     '''
     str=""
-    import string
     i=string.ascci_lowercase
     for i in letters_guessed:
         if i not in letters_guessed:
