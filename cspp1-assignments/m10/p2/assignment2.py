@@ -1,9 +1,9 @@
 '''
 Exercise : Assignment-2
-implement the function hangman, which takes one parameter - the secretWord 
-the user is to guess. This starts up an interactive game of Hangman between 
-the user and the computer. Be sure you take advantage of the three helper functions, 
-isWordGuessed, getGuessedWord, and getAvailableLetters, 
+implement the function hangman, which takes one parameter - the secretWord
+the user is to guess. This starts up an interactive game of Hangman between
+the user and the computer. Be sure you take advantage of the three helper functions,
+isWordGuessed, getGuessedWord, and getAvailableLetters,
 that you've defined in the previous part.
 '''
 
@@ -20,21 +20,21 @@ WORDLIST_FILENAME = "words.txt"
 def loadWords():
     """
     Returns a list of valid words. Words are strings of lowercase letters.
-    
+
     Depending on the size of the word list, this function may
     take a while to finish.
     """
     print("Loading word list from file...")
     # inFile: file
-    inFile = open(WORDLIST_FILENAME, 'r')
+    in_file = open(WORDLIST_FILENAME, 'r')
     # line: string
-    line = inFile.readline()
+    line = in_file.readline()
     # wordlist: list of strings
     wordlist = line.split()
     print("  ", len(wordlist), "words loaded.")
     return wordlist
 
-def chooseWord(wordlist):
+def choose_word(wordlist):
     """
     wordlist (list): list of words (strings)
 
@@ -91,49 +91,57 @@ def get_available_letters(letters_guessed):
     return str1
 
 
-def hangman(secretWord):
+def hangman(secret_word):
     '''
     secretWord: string, the secret word to guess.
 
     Starts up an interactive game of Hangman.
 
-    * At the start of the game, let the user know how many 
+    * At the start of the game, let the user know how many
       letters the secretWord contains.
 
     * Ask the user to supply one guess (i.e. letter) per round.
 
-    * The user should receive feedback immediately after each guess 
+    * The user should receive feedback immediately after each guess
       about whether their guess appears in the computers word.
 
-    * After each round, you should also display to the user the 
-      partially guessed word so far, as well as letters that the 
+    * After each round, you should also display to the user the
+      partially guessed word so far, as well as letters that the
       user has not yet guessed.
 
     Follows the other limitations detailed in the problem write-up.
     '''
     # FILL IN YOUR CODE HERE...
     print("Welcome to the game, Hangman!")
-    print("I am thinking of a word that is " + str(len(secretWord)) + " letters long.")
+    print("I am thinking of a word that is " + str(len(secret_word)) + " letters long.")
     wrong_guess_count = 8
     entered_string_by_user = ""
+    list1 = []
     while True:
         print("-----------")
         print("You have " +  str(wrong_guess_count) +" guesses left.")
         print("Available letters: " + get_available_letters(entered_string_by_user.split()))
         char_entered = input("Please guess a letter: ")
-        entered_string_by_user =  entered_string_by_user + " " + char_entered
-        
-        if is_word_guessed(secretWord, char_entered):
-            print("Good guess: " + get_guessed_word(secretWord, entered_string_by_user.split()))
-        else:
-            print("Oops! That letter is not in my word: " + get_guessed_word(secretWord, entered_string_by_user.split()))
-            wrong_guess_count -= 1
+        entered_string_by_user = entered_string_by_user + " " + char_entered
 
-        if get_guessed_word(secretWord, entered_string_by_user.split()) == secretWord:
+        if char_entered not in list1:
+
+            if is_word_guessed(secret_word, char_entered):
+                print("Good guess: " + get_guessed_word(secret_word, entered_string_by_user.split()))
+
+            else:
+                print("Oops! That letter is not in my word: " + get_guessed_word\
+                    (secret_word, entered_string_by_user.split()))
+                wrong_guess_count -= 1
+        else:
+            print("the given letter is repeating:" + get_guessed_word\
+                (secret_word, entered_string_by_user.split()))
+        list1 = list1+entered_string_by_user.split()
+        if get_guessed_word(secret_word, entered_string_by_user.split()) == secret_word:
             print("Congratulations, you won!")
             break
         elif wrong_guess_count == 0:
-            print("Sorry, you ran out of guesses. The word was " + secretWord)
+            print("Sorry, you ran out of guesses. The word was " + secret_word)
             break
 
 
@@ -141,13 +149,13 @@ def hangman(secretWord):
 def main():
     '''
     Main function for the given program
-    
+
     When you've completed your hangman function, uncomment these two lines
     and run this file to test! (hint: you might want to pick your own
     secretWord while you're testing)
     '''
-    secretWord = chooseWord(wordlist).lower()
-    hangman(secretWord)
+    secret_word = choose_word(wordlist).lower()
+    hangman(secret_word)
 
 
 if __name__ == "__main__":
