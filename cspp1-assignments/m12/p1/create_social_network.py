@@ -37,7 +37,7 @@ def create_social_network(data):
     var_j=0
     input_list=data.split()
     for var_j in range(0,(len(input_list)-2),3):
-        d[input_list[j]]=input_list[j+2].split(",")
+        d[input_list[var_j]]=input_list[var_j+2].split(",")
 
     return out_dict
 
