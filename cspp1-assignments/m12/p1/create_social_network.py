@@ -34,11 +34,12 @@ def create_social_network(data):
 
     # remove the pass below and start writing your code
     d={}
-    i=0
-    l=[]
-    input_list=data.split(" ")
-    L=input_list
-    d[input_list[i]]=input_list[i+2].split(",")
+    j=0
+    input_list=data.split()
+    print((input_list))
+    for j in range(0,(len(input_list)-2),3):
+        d[input_list[j]]=input_list[j+2].split(",")
+
     return d
 
 
@@ -52,6 +53,7 @@ def main():
         i += 1
         string += input()
         string += '\n'
+
 
     print(create_social_network(string))
 
