@@ -36,7 +36,7 @@ def create_social_network(data):
     out_dict = {}
     var_j = 0
     input_list = data.split()
-    if follow not in input_list:
+    if 'follow' not in input_list:
         return out_dict
     for var_j in range(0, (len(input_list)-2), 3):
         out_dict[input_list[var_j]] = input_list[var_j+2].split(",")
