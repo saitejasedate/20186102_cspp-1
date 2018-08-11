@@ -20,6 +20,8 @@ def get_available_letters(letters_guessed):
             str1 = str1+i
     return str1
 
+
+
 def main():
     '''
     Main function for the given program
