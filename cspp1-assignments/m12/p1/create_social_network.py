@@ -36,7 +36,6 @@ def create_social_network(data):
     d={}
     j=0
     input_list=data.split()
-    print((input_list))
     for j in range(0,(len(input_list)-2),3):
         d[input_list[j]]=input_list[j+2].split(",")
 
