@@ -33,11 +33,11 @@ def create_social_network(data):
     '''
 
     # remove the pass below and start writing your code
-    out_dict={}
-    var_j=0
-    input_list=data.split()
+    out_dict = {}
+    var_j = 0
+    input_list = data.split()
     for var_j in range(0,(len(input_list)-2),3):
-        out_dict[input_list[var_j]]=input_list[var_j+2].split(",")
+        out_dict[input_list[var_j]] = input_list[var_j+2].split(",")
 
     return out_dict
 
