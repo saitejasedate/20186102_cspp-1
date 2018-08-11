@@ -38,7 +38,6 @@ def create_social_network(data):
     l=[]
     input_list=data.split(" ")
     L=input_list
-    print(input_list)
     d[input_list[i]]=input_list[i+2]
     return d
 
