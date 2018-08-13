@@ -49,7 +49,7 @@ def getFrequencyDict(sequence):
     for x in sequence:
         freq[x] = freq.get(x,0) + 1
     return freq
-	
+    
 
 # (end of helper code)
 # -----------------------------------
@@ -73,15 +73,13 @@ def getWordScore(word, n):
     returns: int >= 0
     """
     # TO DO ... <-- Remove this comment when you code this function
-    i = 0
-    sum_letters = 0
-    for temp_var in word:
-        if temp_var in word:
-            sum_letters = sum_letters+scrabble_letter_values[i]
-    sum_letters = sum_letters*len(n_int)
-    if len(word) == n_int:
-        sum_letters = sum_letters + 50
-    return sum_letters
+    cou_nt = 0
+    for i in word:
+        if i in SCRABBLE_LETTER_VALUES:
+            cou_nt += SCRABBLE_LETTER_VALUES[i]
+    if len(word) == n:
+        return cou_nt*len(word)+50
+    return cou_nt*len(word)
 
 
 
@@ -103,8 +101,8 @@ def displayHand(hand):
     """
     for letter in hand.keys():
         for j in range(hand[letter]):
-            print(letter,end =" ")       # print all on the same line
-    print()                             # print an empty line
+            print(letter,end=" ")       # print all on the same line
+    print()                              # print an empty line
 
 #
 # Problem #2: Make sure you understand how this function works and what it does!
@@ -154,11 +152,12 @@ def updateHand(hand, word):
     returns: dictionary (string -> int)
     """
     # TO DO ... <-- Remove this comment when you code this function
+    cou_nt = 0
+    update_hand = hand.copy()
     for letter in word:
-        if letter in hand:
-            hand[letter] = hand[letter] + 1
-    return hand
-
+        if letter in update_hand:
+            update_hand[letter]-=1
+    return update_hand
 
 #
 # Problem #3: Test word validity
@@ -176,12 +175,18 @@ def isValidWord(word, hand, wordList):
     """
     # TO DO ... <-- Remove this comment when you code this function
     cou_nt = 0
+    update_hand = hand.copy()
     if word in wordList:
-        for i in word:
-            if i in hand:
-                cou_nt = cou_nt + 1
-    return bool(cou_nt == len(word))
+        for letter in word:
+            if letter in update_hand and update_hand[letter]>0:
+                update_hand[letter]-=1
+                cou_nt+=1
+        return bool(len(word)==cou_nt)
+    else:
+        return False
 
+                
+  
 
 #
 # Problem #4: Playing a hand
@@ -196,12 +201,29 @@ def calculateHandlen(hand):
     """
     # TO DO... <-- Remove this comment when you code this function
 
-    sum_n = 0
-    for iter_n in hand:
-        sum_n = sum_n + hand[iter_n]
-    return sum_n
+    return sum(hand.values())
 
 def playHand(hand, wordList, n):
+    total_score = 0
+    while calculateHandlen(hand) > 0:
+        displayHand(hand)
+        user_input = input()
+        if user_input == ".":
+            print("game over")
+            print("total score:", total_score)
+            break
+        else:
+            if not isValidWord(user_input, hand, wordList):
+                print("invalid word")
+                print()
+            else:
+                score = getWordScore(user_input, n)
+                print(score)
+                print()
+                total_score+= score
+                print("total score :", total_score)
+                hand = updateHand(hand, user_input)
+
     """
     Allows the user to play the given hand, as follows:
 
@@ -271,6 +293,20 @@ def playGame(wordList):
     """
     # TO DO ... <-- Remove this comment when you code this function
     #print("playGame not yet implemented.") # <-- Remove this line when you code the function
+    hand={}
+    while True:
+        user_input = input("Enter a input n(for new hand) or r(for last hand) or e(exit the game)")
+        if user_input is n:
+            hand = dealHand(HAND_SIZE)
+            play(hand, wordList, HAND_SIZE)
+        elif user_input is r:
+            playHand(hand, wordList, HAND_SIZE)
+        elif user_input is e:
+            print("game over")
+            break
+        else:
+            print("invalid input")
+
    
 
 
