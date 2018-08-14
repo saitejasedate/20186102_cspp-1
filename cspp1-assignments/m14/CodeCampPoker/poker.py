@@ -18,9 +18,9 @@ def is_straight(hand):
     face_values=[]
     for h in hand:
         face_values.append(card_values[h[0]])
-    print(face_values)
+    #print(face_values)
     face_values.sort()
-    flag=0
+    #flag=0
     for i in range(0,len(face_values)-1):
         if face_values[i+1]-face_values[i]!=1:
             return False
