@@ -70,7 +70,7 @@ def hand_rank(hand):
         return 3
     elif is_flush(hand):
         return 2
-    elif is_straight(hand):  
+    elif is_straight(hand):
         return 1
     else:
         return 0
@@ -111,4 +111,3 @@ if __name__ == "__main__":
     print(' '.join(poker(HANDS)))
     #for h in HANDS:
         #print(is_straight(h))
-
