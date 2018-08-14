@@ -108,6 +108,6 @@ if __name__ == "__main__":
 
         # test the poker function to see how it works
     print(' '.join(poker(HANDS)))
-    for h in HANDS:
-        print(is_straight(h))
+    #for h in HANDS:
+        #print(is_straight(h))
 
