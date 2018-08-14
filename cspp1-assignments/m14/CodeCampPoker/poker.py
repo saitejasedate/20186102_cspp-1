@@ -23,7 +23,7 @@ def is_straight(hand):
     face_values.sort()
     #flag=0
     for i in range(0, len(face_values)-1):
-        if face_values[i+1] - face_values[i]!=1:
+        if face_values[i+1] - face_values[i] != 1:
             return False
     return True
 
