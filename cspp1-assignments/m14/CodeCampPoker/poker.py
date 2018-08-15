@@ -115,7 +115,7 @@ def hand_rank(hand):
         return 4
     elif is_three_a_kind(hand) and is_one_pair(hand):
         return 7
-    elif is flush(suit_hand):
+    elif is_flush(suit_hand):
         return 6
     elif is_straight(face_hand):
         return 5
