@@ -42,6 +42,41 @@ def is_flush(hand):
             return False
     return True
 
+def is_four_a_kind(hand):
+    '''
+    If four cards in a hand are same returns true
+    '''
+    for i in range(len(hand)-3):
+        if hand[i] == hand[i+1] == hand[i+2] == hand[i+3]:
+            return True
+
+def is_three_a_kind(hand):
+    '''
+    If three cards in a hand are same returns true
+    '''
+    for i in range(len(hand)-2):
+        if hand[i] == hand[i+1] == hand[i+2]:
+            return True
+        return False
+
+def is_one_pair(hand):
+    '''
+    If there is a pair of some cards in a hand returns true
+    '''
+    if len(hand) - len(set(hand)) == 1:
+        return True
+    return False
+
+def is_two_pair(hand):
+    '''
+    If there are two pairs of same card in a hand returns true
+    '''
+    if len(hand) - len(set(hand)) == 2:
+        return True
+    return False
+
+
+
 def hand_rank(hand):
     '''
         You will code this function. The goal of the function is to
@@ -66,11 +101,29 @@ def hand_rank(hand):
     # third would be a straight with the return value 1
     # any other hand would be the fourth best with the return value 0
     # max in poker function uses these return values to select the best hand
-    if is_straight(hand) and is_flush(hand):
+    face_hand = []
+    suit_hand = []
+    for i in hand:
+        face_hand.append(GLOBAL_DICT[i[0]])
+        suit_hand.append(i[1])
+    face_hand.sort()
+    suit_hand.sort()
+
+    if is_straight(face_hand) and is_flush(suit_hand):
+        return 8
+    elif is_four_a_kind(face_hand):
+        return 4
+    elif is_three_a_kind(hand) and is_one_pair(hand):
+        return 7
+    elif is flush(suit_hand):
+        return 6
+    elif is_straight(face_hand):
+        return 5
+    elif is_three_a_kind(face_hand):
         return 3
-    elif is_flush(hand):
+    elif is_two_pair(face_hand):
         return 2
-    elif is_straight(hand):
+    elif is_one_pair(face_hand):
         return 1
     return 0
 
