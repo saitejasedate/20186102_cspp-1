@@ -17,14 +17,14 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    # face_values = []
+    # hand = []
     # for var_h in hand:
-    #     face_values.append(GLOBAL_DICT[var_h[0]])
-    # #print(face_values)
-    # face_values.sort()
+    #     hand.append(card_values[var_h[0]])
+    # #print(hand)
+    # hand.sort()
     # #flag=0
-    for i in range(0, len(face_values)-1):
-        if face_values[i+1] - face_values[i] != 1:
+    for i in range(0, len(hand)-1):
+        if hand[i+1] - hand[i] != 1:
             return False
     return True
 
