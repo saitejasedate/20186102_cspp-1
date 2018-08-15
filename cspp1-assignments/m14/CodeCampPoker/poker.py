@@ -4,6 +4,9 @@
     https://en.wikipedia.org/wiki/List_of_poker_hands
 '''
 
+    GLOBAL_DICT = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2,\
+
+     '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9}
 def is_straight(hand):
     '''
         How do we find out if the given hand is a straight?
@@ -14,8 +17,6 @@ def is_straight(hand):
         Think of an algorithm: given the card face value how to check if it a straight
         Write the code for it and return True if it is a straight else return False
     '''
-    card_values = {'T':10, 'J':11, 'Q':12, 'K':13, 'A':14, '2':2,\
-     '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9}
     face_values = []
     for var_h in hand:
         face_values.append(card_values[var_h[0]])
