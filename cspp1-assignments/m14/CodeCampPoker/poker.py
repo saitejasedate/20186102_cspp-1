@@ -19,7 +19,7 @@ def is_straight(hand):
     '''
     face_values = []
     for var_h in hand:
-        face_values.append(card_values[var_h[0]])
+        face_values.append(GLOBAL_DICT[var_h[0]])
     #print(face_values)
     face_values.sort()
     #flag=0
