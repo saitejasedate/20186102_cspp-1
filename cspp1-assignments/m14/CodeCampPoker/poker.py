@@ -38,7 +38,6 @@ def is_flush(hand):
         Write the code for it and return True if it is a flush else return False
     '''
     suit = hand[0]
-    print(hand[0])
     for var_h in hand:
         if suit != var_h:
             return False
