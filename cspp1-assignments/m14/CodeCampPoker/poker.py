@@ -106,7 +106,9 @@ def hand_rank(hand):
     suit_hand = []
     for i in hand:
         face_hand.append(GLOBAL_DICT[i[0]])
+        print(face_hand)
         suit_hand.append(i[1])
+        print(suit_hand)
     face_hand.sort()
     suit_hand.sort()
 
