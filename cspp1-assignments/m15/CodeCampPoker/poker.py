@@ -109,23 +109,32 @@ def hand_rank(hand):
         suit_hand.append(i[1])
     face_hand.sort()
     suit_hand.sort()
-
+    a_temp=[]
+    card_rank = ['--23456789JQKA'.index(c) for c, s in hand]
+    card_rank.sort()
+    card_rank.reverse()
     if is_straight(face_hand) and is_flush(suit_hand):
-        return 8
+        return (8, card_rank)
     elif is_four_a_kind(face_hand):
-        return 4
+        return (4, card_rank)
     elif is_three_a_kind(hand) and is_one_pair(hand):
-        return 7
+        return (7, card_rank)
     elif is_flush(suit_hand):
-        return 6
+        return (6, card_rank)
     elif is_straight(face_hand):
-        return 5
+        return (5, card_rank)
     elif is_three_a_kind(face_hand):
-        return 3
+        return (3, card_rank)
     elif is_two_pair(face_hand):
-        return 2
+        return (2, card_rank)
     elif is_one_pair(face_hand):
-        return 1
+        for i in range(len(card_rank)-1):
+            if card_rank[i] == card_rank[i+1]:
+                a_temp = card_rank[i]
+                card_rank = []
+                card_rank.append(a_temp)
+                break
+        return (1, card_rank)
     return 0
 
 def poker(hands):

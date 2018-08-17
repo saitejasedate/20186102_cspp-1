@@ -111,6 +111,10 @@ def hand_rank(hand):
         print(suit_hand)
     face_hand.sort()
     suit_hand.sort()
+    a_temp=[]
+    card_rank = ['--23456789JQKA'.index(c) for c, s in hand]
+    card_rank.sort()
+    card_rank.reverse()
 
     if is_straight(face_hand) and is_flush(suit_hand):
         return 8
@@ -127,6 +131,12 @@ def hand_rank(hand):
     elif is_two_pair(face_hand):
         return 2
     elif is_one_pair(face_hand):
+        for i in range(len(card_rank)-1):
+            if card_rank[i] == card_rank[i+1]:
+                a_temp = card_rank[i]
+                card_rank = []
+                card_rank.append(a_temp)
+                break
         return 1
     return 0
 
