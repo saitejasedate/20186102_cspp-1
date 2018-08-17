@@ -4,6 +4,9 @@ import math
     Document Distance - A detailed description is given in the PDF
 '''
 def combine_dictionaries(dictionary_one, dictionary_two):
+    '''
+    create a combine dictionary of two dictionaries
+    '''
     dictionary = {}
     for word in dictionary_one:
         if word in dictionary_two:
@@ -18,6 +21,9 @@ def combine_dictionaries(dictionary_one, dictionary_two):
     return dictionary
 
 def calculate_similarity(dictionary):
+    '''
+    calculate the similarity
+    '''
     numerator = sum([k[0] * k[1] for k in dictionary.values()])
     d1 = math.sqrt(sum([k[0] ** 2 for k in dictionary.values()]))
     d2 = math.sqrt(sum([k[1] ** 2 for k in dictionary.values()]))
@@ -25,6 +31,9 @@ def calculate_similarity(dictionary):
 
 
 def create_dictionary(words_list):
+    '''
+    returns a dictionary without stopwords
+    '''
     dictionary = {}
     stopwords_doc = load_stopwords("stopwords.txt")
     for word in words_list:
@@ -36,8 +45,11 @@ def create_dictionary(words_list):
                 dictionary[word] += 1
     return dictionary
 
-    
+
 def clean_given_text(text_input):
+    '''
+    clean the input text 
+    '''
     words = text_input.lower().strip().replace("\'", "")
     regex = re.compile('[^a-z]')
     words = regex.sub(" ", words).split(" ")
@@ -66,13 +78,13 @@ def load_stopwords(filename):
     return stopwords
 
 def main():
+    '''
+    take two inputs and call the similarity function
+    '''
     input1 = input()
     input2 = input()
 
     print(similarity(input1, input2))
 
-    '''
-        take two inputs and call the similarity function
-    '''
 if __name__ == '__main__':
     main()
