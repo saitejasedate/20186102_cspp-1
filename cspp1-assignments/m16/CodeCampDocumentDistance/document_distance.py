@@ -7,13 +7,13 @@ def combine_dictionaries(dictionary_one, dictionary_two):
     dictionary = {}
     for word in dictionary_one:
         if word in dictionary_two:
-            if word not in dictionary :
+            if word not in dictionary and len(word) > 0:
                 dictionary[word] = [dictionary_one[word], dictionary_two[word]]
     for word in dictionary_one:
-        if word not in dictionary:
+        if word not in dictionary and len(word) > 0:
             dictionary[word] = [dictionary_one[word], 0]
     for word in dictionary_two:
-        if word not in dictionary:
+        if word not in dictionary and len(word) > 0:
             dictionary[word] = [0, dictionary_two[word]]
     return dictionary
 
