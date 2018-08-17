@@ -6,8 +6,9 @@ import math
 def combine_dictionaries(dictionary_one, dictionary_two):
     dictionary = {}
     for word in dictionary_one:
-        if word not in dictionary:
-            dictionary[word] = [dictionary_one[word], dictionary_two[word]]
+        if word in dictionary_two:
+            if word not in dictionary :
+                dictionary[word] = [dictionary_one[word], dictionary_two[word]]
     for word in dictionary_one:
         if word not in dictionary:
             dictionary[word] = [dictionary_one[word], 0]
