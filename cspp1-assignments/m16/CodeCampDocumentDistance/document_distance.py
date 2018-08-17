@@ -6,7 +6,8 @@ import math
 def combine_dictionaries(dictionary_one, dictionary_two):
     dictionary = {}
     for word in dictionary_one:
-        dictionary[word] = [dictionary_one[word], dictionary_two[word]]
+        if word not in dictionary:
+            dictionary[word] = [dictionary_one[word], dictionary_two[word]]
     for word in dictionary_one:
         if word not in dictionary:
             dictionary[word] = [dictionary_one[word], 0]
@@ -50,7 +51,7 @@ def similarity(text_input_one, text_input_two):
     # dict2.lower()
     dictionary_one = create_dictionary(clean_given_text(text_input_one))
     dictionary_two = create_dictionary(clean_given_text(text_input_two))
-    dictionary = combine_dictionaries(dictionary_one,dictionary_two)
+    dictionary = combine_dictionaries(dictionary_one, dictionary_two)
     return calculate_similarity(dictionary)
 
 def load_stopwords(filename):
