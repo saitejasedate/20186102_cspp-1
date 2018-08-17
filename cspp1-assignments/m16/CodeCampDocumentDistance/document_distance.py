@@ -25,7 +25,7 @@ def calculate_similarity(dictionary):
 
 
 def create_dictionary(words_list):
-    dictionary={}
+    dictionary = {}
     stopwords_doc = load_stopwords("stopwords.txt")
     for word in words_list:
         word = word.strip()
@@ -38,9 +38,9 @@ def create_dictionary(words_list):
 
     
 def clean_given_text(text_input):
-    words = text_input.lower().strip().replace("\'","")
+    words = text_input.lower().strip().replace("\'", "")
     regex = re.compile('[^a-z]')
-    words = regex.sub(" ",words).split(" ")
+    words = regex.sub(" ", words).split(" ")
     return words
 
 
@@ -57,7 +57,7 @@ def similarity(text_input_one, text_input_two):
 
 def load_stopwords(filename):
     '''
-        loads stop words from a file and returns a dictionary
+     loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
     with open(filename, 'r') as filename:
