@@ -41,8 +41,7 @@ def create_social_network(data):
     for var_j in range(0, (len(input_list)-2), 3):
         if input_list[var_j+1] not in var_fail:
             break
-        if input_list[var_j] not in out_dict:
-            out_dict[input_list[var_j]] = input_list[var_j+2].split(",")
+        if input_list[var_j] not in out_dict:out_dict[input_list[var_j]] = input_list[var_j+2].split(",")
     return out_dict
 
 
