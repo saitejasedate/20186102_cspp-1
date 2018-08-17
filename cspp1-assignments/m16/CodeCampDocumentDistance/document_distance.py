@@ -25,8 +25,8 @@ def calculate_similarity(dictionary):
     calculate the similarity
     '''
     numerator = sum([k[0] * k[1] for k in dictionary.values()])
-    d1 = math.sqrt(sum([k[0] ** 2 for k in dictionary.values()]))
-    d2 = math.sqrt(sum([k[1] ** 2 for k in dictionary.values()]))
+    var_d1 = math.sqrt(sum([k[0] ** 2 for k in dictionary.values()]))
+    var_d2 = math.sqrt(sum([k[1] ** 2 for k in dictionary.values()]))
     return numerator/(d1*d2)
 
 
