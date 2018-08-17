@@ -1,8 +1,8 @@
-import re
-import math
 '''
     Document Distance - A detailed description is given in the PDF
 '''
+import re
+import math
 def combine_dictionaries(dictionary_one, dictionary_two):
     '''
     create a combine dictionary of two dictionaries
@@ -48,7 +48,7 @@ def create_dictionary(words_list):
 
 def clean_given_text(text_input):
     '''
-    clean the input text 
+    clean the input text
     '''
     words = text_input.lower().strip().replace("\'", "")
     regex = re.compile('[^a-z]')
@@ -72,8 +72,8 @@ def load_stopwords(filename):
      loads stop words from a file and returns a dictionary
     '''
     stopwords = {}
-    with open(filename, 'r') as filename:
-        for line in filename:
+    with open(filename, 'r') as filename1:
+        for line in filename1:
             stopwords[line.strip()] = 0
     return stopwords
 
