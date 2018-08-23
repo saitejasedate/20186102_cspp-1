@@ -42,14 +42,16 @@ def read_matrix():
         error message should be "Error: Invalid input for the matrix"
     '''
     matrix = []
-    list_input = input().split(",")
+    list_input = input().split(',')
     rows,columns = int(list_input[0]), int(list_input[1])
-    for i in range(rows):
-        matrix = input().split(" ")
-        if len(matrix) == rows:
-            matrix.append([int(i) for i in matrix])
+    for _ in range(rows):
+        list_matrix_row = input().split()
+        if columns == len(list_matrix_row):
+            matrix.append([int(i) for i in list_matrix_row])
+        else:
+            print("Error: Invalid input for the matrix")
+            return None
     return matrix
-        
    
 def main():
     # read matrix 1
