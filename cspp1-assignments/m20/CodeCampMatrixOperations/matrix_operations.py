@@ -12,10 +12,10 @@ def mult_matrix(m1, m2):
     # pass
     add_ = re_mat(len(m1), len(m2[0]))
     if len(m1[0]) == len(m2):
-        for i in range(len(m1)):
-            for j in range(len(m2[0])):
-                for k in range(len(m2)):
-                    add_[i][j] += m1[i][k] * m2[k][j]
+        for row_ in range(len(m1)):
+            for col_ in range(len(m2[0])):
+                for com_ in range(len(m2)):
+                    add_[row_][col_] += m1[row_][com_] * m2[com_][col_]
         return add_
     else:
         print("Error: Matrix shapes invalid for mult")
