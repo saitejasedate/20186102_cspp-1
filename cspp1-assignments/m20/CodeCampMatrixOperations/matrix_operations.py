@@ -51,7 +51,7 @@ def read_matrix():
         else:
             print("Error: Invalid input for the matrix")
             return None
-    print(matrix)
+    return matrix
    
 
 
