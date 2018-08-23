@@ -33,7 +33,7 @@ def add_matrix(m1_var, m2_var):
     if len(m1_var) == len(m2_var) and len(m1_var[0]) == len(m2_var[0]):
         for i in range(len(m1_var)):
             for j in range(len(m1_var[0])):
-                add_[i][j] += (m1[i][j] + m2[i][j])
+                add_[i][j] += (m1_var[i][j] + m2_var[i][j])
         return add_
 
     print("Error: Matrix shapes invalid for addition")
