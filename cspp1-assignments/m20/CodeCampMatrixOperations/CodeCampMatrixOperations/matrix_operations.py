@@ -1,3 +1,4 @@
+def mult_matrix(m1_var, m2_var):
     '''
         check if the matrix1 columns = matrix2 rows
         mult the matrices and return the result matrix
@@ -9,7 +10,6 @@
     # columns = len(m2[0])
     # multi_matrix = [[0 for i in range(columns)] for j in range(rows)]
     # pass
-def mult_matrix(m1_var, m2_var):
     add_ = re_mat(len(m1_var), len(m2_var[0]))
     if len(m1_var[0]) == len(m2_var):
         for row_ in range(len(m1_var)):
