@@ -1,3 +1,7 @@
+'''
+sum and product of two matrices
+'''
+
 def mult_matrix(m1_var, m2_var):
     '''
         check if the matrix1 columns = matrix2 rows
@@ -39,6 +43,9 @@ def add_matrix(m1_var, m2_var):
     print("Error: Matrix shapes invalid for addition")
     return None
 def re_mat(rows, columns):
+    '''
+    resultant geneartive matrix
+    '''
     add_matrix = [[0 for i in range(columns)] for j in range(rows)]
     return add_matrix
 
@@ -63,6 +70,9 @@ def read_matrix():
     return matrix
 
 def main():
+    '''
+    read the matrices
+    '''
     # read matrix 1
     matrix_one = read_matrix()
     if matrix_one is None:
