@@ -46,8 +46,8 @@ def re_mat(rows, columns):
     '''
     resultant geneartive matrix
     '''
-    add_matrix = [[0 for i in range(columns)] for j in range(rows)]
-    return add_matrix
+    add_matrix1 = [[0 for i in range(columns)] for j in range(rows)]
+    return add_matrix1
 
 def read_matrix():
     '''
