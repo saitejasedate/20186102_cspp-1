@@ -15,7 +15,7 @@ def mult_matrix(m1_var, m2_var):
         for row_ in range(len(m1_var)):
             for col_ in range(len(m2_var[0])):
                 for com_ in range(len(m2_var)):
-                    add_[row_][col_] += m1[row_][com_] * m2[com_][col_]
+                    add_[row_][col_] += m1_var[row_][com_] * m2_var[com_][col_]
         return add_
     
     print("Error: Matrix shapes invalid for mult")
