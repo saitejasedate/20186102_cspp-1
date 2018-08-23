@@ -38,7 +38,7 @@ def add_matrix(m1, m2):
     else:
         print("Error: Matrix shapes invalid for addition")
         return None
-def generate_resultant_matrix(rows, columns):
+def re_mat(rows, columns):
      add_matrix = [[0 for i in range(columns)] for j in range(rows)]
      return add_matrix
 
