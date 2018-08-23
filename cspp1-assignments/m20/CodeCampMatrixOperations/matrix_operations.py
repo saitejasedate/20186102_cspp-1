@@ -65,16 +65,21 @@ def read_matrix():
 def main():
     # read matrix 1
     matrix_one = read_matrix()
+    if matrix_one is None:
+        exit()
+
      # read matrix 2
     matrix_two = read_matrix()
+    if matrix_two is None:
+        exit()
 
     # add matrix 1 and matrix 2
 
-    print(add_matrix(matrix_one,matrix_two))
+    print(add_matrix(matrix_one, matrix_two))
 
     # multiply matrix 1 and matrix 2
     
-    
+    print(mult_matrix(matrix_one, matrix_two))
 
 if __name__ == '__main__':
     main()
