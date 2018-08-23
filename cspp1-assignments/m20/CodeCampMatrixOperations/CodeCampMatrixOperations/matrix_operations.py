@@ -21,7 +21,7 @@ def mult_matrix(m1_var, m2_var):
     print("Error: Matrix shapes invalid for mult")
     return None
 
-def add_matrix(m1, m2):
+def add_matrix(m1_var, m2_var):
     '''
         check if the matrix shapes are similar
         add the matrices and return the result matrix
@@ -29,15 +29,15 @@ def add_matrix(m1, m2):
         and return None
         error message should be "Error: Matrix shapes invalid for addition"
     '''
-    add_ = re_mat(len(m1), len(m1[0]))
-    if len(m1) == len(m2) and len(m1[0]) == len(m2[0]):
-        for i in range(len(m1)):
-            for j in range(len(m1[0])):
+    add_ = re_mat(len(m1_var), len(m1_var[0]))
+    if len(m1_var) == len(m2_var) and len(m1_var[0]) == len(m2_var[0]):
+        for i in range(len(m1_var)):
+            for j in range(len(m1_var[0])):
                 add_[i][j] += (m1[i][j] + m2[i][j])
         return add_
-    else:
-        print("Error: Matrix shapes invalid for addition")
-        return None
+
+    print("Error: Matrix shapes invalid for addition")
+    return None
 def re_mat(rows, columns):
     add_matrix = [[0 for i in range(columns)] for j in range(rows)]
     return add_matrix
