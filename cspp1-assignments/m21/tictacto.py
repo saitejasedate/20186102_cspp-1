@@ -64,7 +64,7 @@ def main():
     input1 = is_input_valid(matrix)
     if input1 == False:
         print("invalid input")
-    else:
+    if input1:
         valid_res = is_invalid_game(matrix) 
         if valid_res:
             partial_res = is_check_var(matrix)
