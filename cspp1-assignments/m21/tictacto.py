@@ -24,13 +24,13 @@ def is_check_var(check_list):
 		nonlocal count_
 		for row in check_list:
 			if row.count(variable) == 3:
-				return True		#print(True)
+				return True,variable		#print(True)
 		for row in transpose:
 			if row.count(variable) == 3:
 				return True		#print(True)
 		if (check_list[0][0] == check_list[1][1] == check_list[2][2] == variable) or\
 		(check_list[0][2] == check_list[1][1] == check_list[2][0] == variable):
-			return True			#print(True)
+			return True,variable			#print(True)
 		else:
 			if count_  == 1:
 				variable = 'o'
@@ -52,7 +52,7 @@ def main():
 		valid_res = is_invalid_game(matrix)	
 	if valid_res:
 		partial_res = is_check_var(matrix)
-		print(partial_res)
+		print(partial_res[1])
 
 	# else:
 	# 	print("invalid game")
