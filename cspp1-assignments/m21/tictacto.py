@@ -3,8 +3,8 @@ def is_input_valid(check_list):
 	for i in check_list:
 		for j in i:
 			if j not in "x.o":
-				return False
-		return True
+				return invalid input
+
 
 def read_input():
 	tic_tac_to = []
