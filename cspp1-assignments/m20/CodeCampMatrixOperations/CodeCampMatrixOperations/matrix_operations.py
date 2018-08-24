@@ -60,7 +60,7 @@ def read_matrix():
     matrix = []
     list_input = input().split(',')
     rows, columns = int(list_input[0]), int(list_input[1])
-    for _ in range(rows):
+    for i_ in range(rows):
         list_matrix_row = input().split()
         if columns == len(list_matrix_row):
             matrix.append([int(i) for i in list_matrix_row])
