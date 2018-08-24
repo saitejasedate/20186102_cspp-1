@@ -70,8 +70,7 @@ def main():
             print(partial_res[1])
     if not input1:
         print("invalid input")
-    else:
-        print("draw")
+        # print("draw")
 
     # else:
     #   print("invalid game")
