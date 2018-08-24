@@ -3,7 +3,7 @@ def is_input_valid(check_list):
     for i in check_list:
         for j in i:
             if j not in "x.o":
-                return 'invalid input'
+                return False
             return True
 
 def is_invalid_game(check_lists):
@@ -68,8 +68,10 @@ def main():
         partial_res = is_check_var(matrix)
         if partial_res[1] in 'xo':
             print(partial_res[1])
-        else:
-            print("invalid input")
+    elif:
+        print("invalid input")
+    else:
+        print("draw")
 
     # else:
     #   print("invalid game")
