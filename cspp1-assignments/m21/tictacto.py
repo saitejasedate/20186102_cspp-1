@@ -59,6 +59,4 @@ def main():
 
 
 
-#main()
-a = [['o','x','o'],['o','o','o'],['x','.','x']]
-is_check_var(a)
+main()
