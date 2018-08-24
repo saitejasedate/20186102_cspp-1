@@ -6,10 +6,11 @@ def is_input_valid(check_list):
 				return 'invalid input'
 			return True
 
-def is_invalid_game(check_list):
+def is_invalid_game(check_lists):
 
-	if check_list.count('x') > 5 or check_list.count('o') > 5:
-		return 'invalid game'
+	for check_list in check_lists:
+		if check_list.count('x') > 5 or check_list.count('o') > 5:
+			return 'invalid game'
 		# if abs(check_list.count('x') - check_list.count('o')) > 1:
 		# 	return False
 	return True
