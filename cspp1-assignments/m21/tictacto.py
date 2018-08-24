@@ -57,5 +57,6 @@ def main():
         if valid_res:
             partial_res = is_check_var(matrix)
             if partial_res[1] in 'xo':
-                print(partial_res[1])
+                print("draw")
+
 main()
