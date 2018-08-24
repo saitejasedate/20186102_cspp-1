@@ -17,19 +17,7 @@ def is_invalid_game(check_lists):
         return None
     return True
 
-
-
-
-
-
-    #     if check_list.count('x') > 5 or check_list.count('o') > 5:
-    #         return 'invalid game'
-    #     # if abs(check_list.count('x') - check_list.count('o')) > 1:
-    #     #   return False
-    # return True
-
-def is_check_var(check_list):
-    
+def is_check_var(check_list):    
     transpose = zip(*check_list)
     count_ = 1
     variable = 'x'
@@ -70,10 +58,4 @@ def main():
             partial_res = is_check_var(matrix)
             if partial_res[1] in 'xo':
                 print(partial_res[1])
-
-
-
-
 main()
-#a = [['x','o','.'],['x','x','x'],['x','o','x']]
-#print(is_check_var(a))
