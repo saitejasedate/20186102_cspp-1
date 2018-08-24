@@ -45,11 +45,11 @@ def is_check_var(check_list):
         if (check_list[0][0] == check_list[1][1] == check_list[2][2] == variable) or\
         (check_list[0][2] == check_list[1][1] == check_list[2][0] == variable):
             return True, variable            #print(True)
-        else:
-            if count_ == 1:
-                variable = 'o'
-                count_ += 1
-                return is_check_real(check_list)
+        
+        if count_ == 1:
+            variable = 'o'
+            count_ += 1
+            return is_check_real(check_list)
 
     return is_check_real(check_list)
 
