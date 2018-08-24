@@ -56,8 +56,8 @@ def main():
         valid_res = is_invalid_game(matrix) 
         if valid_res:
             partial_res = is_check_var(matrix)
+            if partial_res is None:
+                print("draw")
             if partial_res[1] in 'xo':
                 print(partial_res[1])
-            elif partial_res is None:
-                print("draw")
 main()
