@@ -54,7 +54,10 @@ def main():
 		valid_res = is_invalid_game(matrix)	
 	if valid_res:
 		partial_res = is_check_var(matrix)
-		print(partial_res[1])
+		if partial_res in 'xo':
+			print(partial_res[1])
+		else:
+			print("invalid input")
 
 	# else:
 	# 	print("invalid game")
