@@ -7,13 +7,26 @@ def is_input_valid(check_list):
             return True
 
 def is_invalid_game(check_lists):
-
-    for check_list in check_lists:
-        if check_list.count('x') > 5 or check_list.count('o') > 5:
-            return 'invalid game'
-        # if abs(check_list.count('x') - check_list.count('o')) > 1:
-        #   return False
+    count_x_variable = 0
+    count_o_variable = 0
+    for row in check_lists:
+        count_x_variable += row.count('x')
+        count_o_variable += row.count('o')
+    if count_x_variable > 5 or count_o_variable > 5 or count_x_variable == count_o_variable:
+        print("invalid game")
+        return None
     return True
+
+
+
+
+
+
+    #     if check_list.count('x') > 5 or check_list.count('o') > 5:
+    #         return 'invalid game'
+    #     # if abs(check_list.count('x') - check_list.count('o')) > 1:
+    #     #   return False
+    # return True
 
 def is_check_var(check_list):
     
