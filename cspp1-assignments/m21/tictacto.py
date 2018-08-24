@@ -58,6 +58,6 @@ def main():
             partial_res = is_check_var(matrix)
             if partial_res[1] in 'xo':
                 print(partial_res[1])
-            else:
+            elif partial_res[i] is None:
                 print("draw")
 main()
