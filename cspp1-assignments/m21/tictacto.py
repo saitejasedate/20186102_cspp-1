@@ -35,7 +35,7 @@ def is_check_var(check_list):
 			if count_  == 1:
 				variable = 'o'
 				count_ += 1
-				is_check_real(check_list)
+				return is_check_real(check_list)
 	
 	return is_check_real(check_list)
 
