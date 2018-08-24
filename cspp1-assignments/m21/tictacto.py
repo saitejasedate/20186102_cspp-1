@@ -62,7 +62,7 @@ def read_input():
 def main():
     matrix = read_input()
     input1 = is_input_valid(matrix)
-    if not input1:
+    if input1 == False:
         print("invalid input")
     else:
         valid_res = is_invalid_game(matrix) 
@@ -70,10 +70,6 @@ def main():
             partial_res = is_check_var(matrix)
             if partial_res[1] in 'xo':
                 print(partial_res[1])
-        # print("draw")
-
-    # else:
-    #   print("invalid game")
 
 
 
