@@ -28,7 +28,7 @@ def is_invalid_game(check_lists):
 
 def is_check_var(check_list):
     '''
-    function to return the winner 
+    function to return the winner
     '''
     transpose = zip(*check_list)
     count_ = 1
