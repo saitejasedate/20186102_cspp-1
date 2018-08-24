@@ -7,11 +7,12 @@ def is_input_valid(check_list):
 			return True
 
 def is_invalid_game(check_list):
+	
 	if check_list.count('x') > 5 or check_list.count('o') > 5:
 		return False
 		# if abs(check_list.count('x') - check_list.count('o')) > 1:
 		# 	return False
-	# return True
+	return True
 
 def is_check_var(check_list):
 	
