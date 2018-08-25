@@ -18,7 +18,6 @@ def main():
     input_num_lines = int(input())
     for line_num in range(input_num_lines):
         str_output = str_output + input()
-        line_num += 1
     print(tokenize(str_output))
 
 if __name__ == '__main__':
