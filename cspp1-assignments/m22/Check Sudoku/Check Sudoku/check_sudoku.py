@@ -15,7 +15,7 @@ def check_sudoku(sudoku):
     '''
     for i in sudoku:
         for j in i:
-            if j not in "123456789":
+            if j not in "12345678910":
                 return False
     return True
 def count_number(sudoku):
