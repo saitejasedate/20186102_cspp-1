@@ -4,14 +4,14 @@ each word
 '''
 
 def tokenize(string):
-    dict_ = {}
+    final_dict = {}
     a = string.split(" ")
-    for i_ in (a):
-        if i_ not in dict_:
-            dict_[i_] = 1
+    for var_i in (a):
+        if var_i not in final_dict:
+            final_dict[var_i] = 1
         else:
-            dict_[i_] += 1
-    return dict_
+            final_dict[var_i] += 1
+    return final_dict
             
 def main():
     str_output = ""
