@@ -18,8 +18,13 @@ def check_sudoku(sudoku):
             if j not in "12345678910":
                 return False
     return True
+def count_number(sudoku):
+    for i in sudoku:
+        for j in i:
+            if i.count(j) != 1
+            return False
+    return True        
 
-    pass
 
 def main():
     '''
@@ -36,7 +41,8 @@ def main():
         row = input().split(' ')
         sudoku.append(row)
     # call solution function and print result to console
-    print(check_sudoku(sudoku))
+    if print(check_sudoku(sudoku)) is True:
+        print(count_number(sudoku))
 
 if __name__ == '__main__':
     main()
