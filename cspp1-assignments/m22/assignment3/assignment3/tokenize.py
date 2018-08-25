@@ -22,7 +22,7 @@ def main():
     '''
     str_output = ""
     input_num_lines = int(input())
-    for var_i in range(input_num_lines):
+    for _ in range(input_num_lines):
         str_output = str_output + input()
     print(tokenize(str_output))
 
