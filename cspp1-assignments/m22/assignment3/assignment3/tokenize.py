@@ -8,7 +8,7 @@ def tokenize(string):
     for document_id, document in enumerate(string):
     	for word in string:
                 dict_[word] = [(document_id, string.count(word))]
-    return 
+    return dict_ 
             
 def main():
     str_output = ""
