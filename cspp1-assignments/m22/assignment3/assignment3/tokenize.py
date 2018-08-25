@@ -5,7 +5,7 @@ each word
 
 def tokenize(string):
     dict_ = {}
-    for  word in enumerate(string[0]):
+    for  word in enumerate(string):
     	print(word)
             
 def main():
