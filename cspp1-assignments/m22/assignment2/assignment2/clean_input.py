@@ -9,7 +9,7 @@ def clean_string(string):
     clear the string
     '''
     regex = re.compile('[^a-zA-z0-9]')
-    cleared_string = regex.sub('', string).replace('^','')
+    cleared_string = regex.sub('', string).replace('^', '')
     return cleared_string
 
 
