@@ -4,10 +4,20 @@ each word
 '''
 
 def tokenize(string):
-    pass
+    dict_ = {}
+    for document_id, document in enumerate(string):
+    	for word in string:
+                dict_[word] = [(document_id, string.count(word))]
+    return 
             
 def main():
-    pass
+    str_output = ""
+    input_num_lines = int(input())
+    for line_num in range(input_num_lines):
+        str_output = str_output + input()
+        str_output += '\n'
+        line_num += 1
+    print(tokenize(str_output))
 
 if __name__ == '__main__':
     main()
