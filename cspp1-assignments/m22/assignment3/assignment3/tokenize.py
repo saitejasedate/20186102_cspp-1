@@ -10,7 +10,7 @@ def tokenize(string):
         if i_ not in dict_:
             dict_[i_] = 1
         else:
-            dict_[i_]+=1
+            dict_[i_] += 1
     return dict_
             
 def main():
