@@ -13,6 +13,12 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
+    for i in sudoku:
+        for j in i:
+            if j not in "12345678910":
+                return False
+    return True
+
     pass
 
 def main():
