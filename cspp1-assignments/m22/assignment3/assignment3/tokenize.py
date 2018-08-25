@@ -6,7 +6,6 @@ each word
 def tokenize(string):
     dict_ = {}
     for document_id, document in enumerate(string):
-    	for word in string:
                 dict_[word] = [(document_id, string.count(word))]
     return dict_ 
             
