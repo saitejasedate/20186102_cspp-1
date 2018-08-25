@@ -41,8 +41,9 @@ def main():
         row = input().split(' ')
         sudoku.append(row)
     a = sudoku
+    input1 = check_sudoku(sudoku)
     # call solution function and print result to console
-    if print(check_sudoku(a)) is True:
+    if input == True:
         print(count_number(a))
 
 if __name__ == '__main__':
