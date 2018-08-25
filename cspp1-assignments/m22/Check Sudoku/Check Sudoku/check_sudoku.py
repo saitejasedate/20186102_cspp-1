@@ -13,20 +13,20 @@ def check_sudoku(sudoku):
         Your solution goes here. You may add other helper functions as needed.
         The function has to return True for a valid sudoku grid and false otherwise
     '''
-    for i in sudoku:
-        for j in i:
-            if j not in "12345678910":
+    for var_i in sudoku:
+        for var_j in var_i:
+            if var_j not in "12345678910":
                 return False
     return True
 def count_number(sudoku):
     transpose = zip(*sudoku)
-    for i in sudoku:
-        for j in i:
+    for var_i in sudoku:
+        for var_j in var_i:
             if i.count(j) != 1 and i.count(j) >= 1:
                 return False
-    for i1 in transpose:
-        for j1 in i1:
-            if i1.count(j1) != 1 and i1.count(j1) >= 1:
+    for var_i1 in transpose:
+        for var_j1 in var_i1:
+            if var_i1.count(var_j1) != 1 and i1.count(var_j1) >= 1:
                 return False
     return True
 
@@ -56,7 +56,7 @@ def main():
     # call solution function and print result to console
     if input1 is True:
         print(count_number(actual_sudoku))
-    input2 = count_number(actual_sudoku)
+    # input2 = count_number(actual_sudoku)
     # if input2 is True:
     #     print(final_check(actual_sudoku))
 
