@@ -7,7 +7,7 @@ def tokenize(string):
     dict_ = {}
     for document_id, document in enumerate(string):
                 dict_[string] = [(document_id, string.count(string))]
-    return dict_ 
+    return dict_[string]
             
 def main():
     str_output = ""
