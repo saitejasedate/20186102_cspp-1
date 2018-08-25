@@ -4,6 +4,9 @@ each word
 '''
 
 def tokenize(string):
+    '''
+    function to tokenize the given words
+    '''
     final_dict = {}
     list_a = string.split(" ")
     for var_i in list_a:
@@ -12,8 +15,11 @@ def tokenize(string):
         else:
             final_dict[var_i] += 1
     return final_dict
-            
+
 def main():
+    '''
+    functiion to take string as input and call the function tokenize
+    '''
     str_output = ""
     input_num_lines = int(input())
     for line_num in range(input_num_lines):
