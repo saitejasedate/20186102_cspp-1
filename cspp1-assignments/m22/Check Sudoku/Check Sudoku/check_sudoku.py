@@ -25,6 +25,12 @@ def count_number(sudoku):
                 return False
     return True
 
+def final_check(sudoku):
+    for i in sudoku:
+        for j in i:
+            if i.count(j) >= 1:
+                return False
+    return True            
 
 def main():
     '''
@@ -45,6 +51,9 @@ def main():
     # call solution function and print result to console
     if input1 is True:
         print(count_number(actual_sudoku))
+    input2 = count_number(actual_sudoku)
+    if input2 is True:
+        print(final_check(sudoku))
 
 if __name__ == '__main__':
     main()
