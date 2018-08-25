@@ -23,7 +23,7 @@ def count_number(sudoku):
         for j in i:
             if i.count(j) != 1:
                 return False
-    return True        
+    return True
 
 
 def main():
@@ -31,7 +31,7 @@ def main():
         main function to read input sudoku from console
         call check_sudoku function and print the result to console
     '''
-    
+
     # initialize empty list
     sudoku = []
 
