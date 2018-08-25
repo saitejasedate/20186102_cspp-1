@@ -21,7 +21,7 @@ def check_sudoku(sudoku):
 def count_number(sudoku):
     for i in sudoku:
         for j in i:
-            if i.count(j) != 1 and i.count(j) >=1:
+            if i.count(j) != 1 and i.count(j) >= 1:
                 return False
     return True
 
