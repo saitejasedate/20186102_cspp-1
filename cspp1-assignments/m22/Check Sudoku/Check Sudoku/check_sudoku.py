@@ -40,9 +40,10 @@ def main():
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         sudoku.append(row)
+    a = sudoku
     # call solution function and print result to console
-    if print(check_sudoku(sudoku)) is True:
-        print(count_number(sudoku))
+    if print(check_sudoku(a)) is True:
+        print(count_number(a))
 
 if __name__ == '__main__':
     main()
