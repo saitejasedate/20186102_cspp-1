@@ -4,18 +4,18 @@ each word
 '''
 
 def tokenize(string):
-    dict_out = {}
-    string_split_list = string.split(" ")
-    for element_ in string_split_list:
-        if element_ not in string_split_list:
-            dict_out[element_] = 1
+    dict_ = {}
+    a = string.split(" ")
+    for i_ in (a):
+        if i_ not in dict_:
+            dict_[i_] = 1
         else:
-            dict_out[element_] += 1
-    return dict_out
+            dict[i_]+=1
+    return dict_
             
 def main():
-    input_num_lines = int(input())
     str_output = ""
+    input_num_lines = int(input())
     for line_num in range(input_num_lines):
         str_output = str_output + input()
         line_num += 1
