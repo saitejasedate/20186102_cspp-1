@@ -36,15 +36,15 @@ def main():
     sudoku = []
 
     # loop to read 9 lines of input from console
-    for i in range(9):
+    for var_i in range(9):
         # read a line, split it on SPACE and append row to list
         row = input().split(' ')
         sudoku.append(row)
-    a = sudoku
+    actual_sudoku = sudoku
     input1 = check_sudoku(sudoku)
     # call solution function and print result to console
     if input1 == True:
-        print(count_number(a))
+        print(count_number(actual_sudoku))
 
 if __name__ == '__main__':
     main()
