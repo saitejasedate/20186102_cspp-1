@@ -6,7 +6,7 @@ each word
 def tokenize(string):
     final_dict = {}
     a = string.split(" ")
-    for var_i in (a):
+    for var_i in a:
         if var_i not in final_dict:
             final_dict[var_i] = 1
         else:
