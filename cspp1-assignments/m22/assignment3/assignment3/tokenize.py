@@ -8,7 +8,7 @@ def tokenize(string):
     a = string.split(" ")
     for i_ in enumerate(a):
         dict_[i_[1]] = i_[0]
-        print(dict_)
+    return dict_
             
 def main():
     str_output = ""
